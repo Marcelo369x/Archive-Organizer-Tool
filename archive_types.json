@@ -1,0 +1,85 @@
+
+{
+  "documentos_word": [".doc", ".docx", ".odt", ".rtf", ".wps"],
+
+  "documentos_excel": [".xls", ".xlsx", ".xlsm", ".ods", ".csv"],
+  
+  "documentos_powerpoint": [".ppt", ".pptx", ".odp"],
+  
+  "pdfs": [".pdf"],
+  
+  "textos": [".txt", ".md", ".markdown", ".log", ".tex"],
+  
+  
+  "imagenes_raster": [".jpg", ".jpeg", ".png", ".gif", ".bmp", ".tiff", ".tif", ".webp", ".heic", ".raw", ".cr2", ".nef"],
+  
+  "imagenes_vector": [".svg", ".ai", ".eps"],
+  
+  "iconos": [".ico", ".icns"],
+  
+  "diseno_grafico": [".psd", ".xd", ".fig", ".sketch"],
+  
+  "audio": [".mp3", ".wav", ".aac", ".flac", ".ogg", ".m4a", ".wma", ".mid", ".midi"],
+  
+  "video": [".mp4", ".mkv", ".avi", ".mov", ".wmv", ".flv", ".webm", ".mpeg", ".mpg", ".3gp"],
+  
+  "subtitulos": [".srt", ".ass", ".vtt"],
+  
+  "comprimidos": [".zip", ".rar", ".7z", ".tar", ".gz", ".bz2", ".xz", ".tgz"],
+  
+  "codigo_cpp": [".cpp", ".hpp", ".h", ".cc", ".cxx", ".hh"],
+  
+  "codigo_c": [".c"],
+  
+  "codigo_python": [".py", ".pyw"],
+  
+  "codigo_java": [".java", ".jar"],
+  
+  "codigo_csharp": [".cs"],
+  
+  "codigo_web": [".html", ".htm", ".css", ".scss", ".sass", ".js", ".ts", ".jsx", ".tsx", ".php"],
+  
+  "codigo_go": [".go"],
+  
+  "codigo_rust": [".rs"],
+  
+  "codigo_kotlin": [".kt", ".kts"],
+  
+  "codigo_swift": [".swift"],
+  
+  "codigo_dart": [".dart"],
+  
+  "codigo_ruby": [".rb"],
+  
+  "codigo_shell": [".sh", ".bash"],
+  
+  "codigo_powershell": [".ps1"],
+  
+  "bases_de_datos": [".sql", ".db", ".sqlite", ".sqlite3", ".mdb", ".accdb"],
+  
+  "ejecutables_windows": [".exe", ".msi", ".bat", ".cmd"],
+  
+  "ejecutables_linux": [".run", ".bin", ".deb", ".rpm"],
+  
+  "librerias": [".dll", ".so", ".dylib"],
+  
+  "configuracion": [".json", ".xml", ".yaml", ".yml", ".ini", ".cfg", ".conf", ".toml", ".env"],
+  
+  "fuentes": [".ttf", ".otf", ".woff", ".woff2", ".eot"],
+  
+  "android": [".apk", ".aab"],
+  
+  "apple": [".ipa"],
+  
+  "imagenes_disco": [".iso", ".img", ".vhd", ".vmdk"],
+  
+  "virtualizacion": [".ova", ".ovf"],
+  
+  "cad_3d": [".dwg", ".dxf", ".stl", ".obj", ".fbx", ".blend"],
+  
+  "game_engines": [".unity", ".uproject"],
+  
+  "backup": [".bak", ".backup"],
+  
+  "torrent": [".torrent"]
+}
