@@ -10,45 +10,21 @@ using json = nlohmann::json;
 
 
 
-//funciones-------------------------------------------------------------------------
-void printbanner(){
 
-    std::cout<<
-    R"(
-            _______ _________ _         _______   _______  _______  _______  _______ 
-            (  ____ \\__   __/( \      (  ____ \ (  ___  )(  ____ )(  ____ \(  ___  )
-            | (    \/   ) (   | (      | (    \/ | (   ) || (    )|| (    \/| (   ) |
-            | (__       | |   | |      | (__     | |   | || (____)|| |      | (___) |
-            |  __)      | |   | |      |  __)    | |   | ||     __)| | ____ |  ___  |
-            | (         | |   | |      | (       | |   | || (\ (   | | \_  )| (   ) |
-            | )      ___) (___| (____/\| (____/\ | (___) || ) \ \__| (___) || )   ( |
-            |/       \_______/(_______/(_______/ (_______)|/   \__/(_______)|/     \|
-             _       _________ _______  _______  _______                            
-            ( (    /|\__   __// ___   )(  ____ \(  ____ )                           
-            |  \  ( |   ) (   \/   )  || (    \/| (    )|                           
-            |   \ | |   | |       /   )| (__    | (____)|                           
-            | (\ \) |   | |      /   / |  __)   |     __)                           
-            | | \   |   | |     /   /  | (      | (\ (                              
-            | )  \  |___) (___ /   (_/\| (____/\| ) \ \__                           
-            |/    )_)\_______/(_______/(_______/|/   \__/
-    )";
-    std::cout<< "---------------------------------Coded by: Marelo Folcarelli------"<<std::endl;
-    std::cout<< "----------------------------------------version: 0.1.0------------"<<std::endl;
-}
 
-//funciones--------------------------------------------------------------------------------
 
-int main(){
+
+int main(int argc, char* argv[]){
 
  
  std::ifstream file("archive_types.json");
  json data = json::parse(file) ; 
- std::cout << "[DEBUG] JSON items cargados: " << data.size() << std::endl;
+ std::cout << "JSON items cargados: " << data.size() << std::endl;
   
 
 
  //variables===============================================================================
- std::string route;
+ //std::string route;
  std::unordered_map<std::string , std::string >extensionMap;
  //extensionMap[element.key()] = element.value();
  
@@ -56,17 +32,20 @@ int main(){
 
  //variables===============================================================================
  
- printbanner();
+    if(argc < 2){
+        
+        std::cerr << "No route provided.\n";
+      return 1;
+    }
 
- std::cout << "[+]enter the route that u want to organize [the archives has to be in a mother/main carpet]:";
- getline( std::cin ,route/*_string*/ );
+std::string route = argv[1];
 
     //bucle para recorrer todos los archivos de la ruta
     for(const auto& entry2 : fs::directory_iterator(route)){
 
         //guardar tipo de archivo del archivo iterado en la actualidad 
         std::string extension = entry2.path().extension().string();
-        std::cout << "[DEBUG] Archivo: " << entry2.path().filename().string() << " | Extension: " << extension << std::endl;
+        std::cout << "[+] Archivo: " << entry2.path().filename().string() << " | Extension: " << extension << std::endl;
 
         bool found = false;
         //bucle pa comparar la si son compatibles con las extensiones posibles
